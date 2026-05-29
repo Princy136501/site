@@ -70,14 +70,17 @@
     </div>
 
   <script>
+window.onload = function () {
 
-const btn = document.querySelector(".non");
+    const btn = document.querySelector(".non");
 
-btn.addEventListener("mouseover", () => {
-    btn.style.position = "absolute";
-    btn.style.top = Math.random()*80 + "%";
-    btn.style.left = Math.random()*80 + "%";
-});
+    btn.addEventListener("mouseover", () => {
+        btn.style.position = "absolute";
+        btn.style.top = Math.random() * 80 + "vh";
+        btn.style.left = Math.random() * 80 + "vw";
+    });
+
+};
 
 function oui(){
     document.body.innerHTML = `
@@ -85,8 +88,6 @@ function oui(){
         <p>Je savais que tu dirais oui 😎</p>
     `;
 }
-
 </script>
-
 </body>
 </html>
