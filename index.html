@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pour Toi ❤️</title>
+
+    <style>
+        body{
+            margin:0;
+            height:100vh;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-direction:column;
+            background:linear-gradient(135deg,#ff758c,#ff7eb3);
+            font-family:Arial;
+            color:white;
+            text-align:center;
+        }
+
+        h1{
+            font-size:50px;
+            margin-bottom:20px;
+        }
+
+        p{
+            font-size:22px;
+        }
+
+        .buttons{
+            margin-top:30px;
+        }
+
+        button{
+            padding:15px 30px;
+            margin:10px;
+            border:none;
+            border-radius:30px;
+            font-size:20px;
+            cursor:pointer;
+            transition:0.3s;
+        }
+
+        .yes{
+            background:white;
+            color:#ff4f81;
+        }
+
+        .no{
+            background:#ff4f81;
+            color:white;
+        }
+
+        button:hover{
+            transform:scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Salut ❤️</h1>
+
+    <p>Est-ce que tu veux faire un date avec moi ? 😳</p>
+
+    <div class="buttons">
+        <button class="yes" onclick="oui()">Oui</button>
+
+        <button class="no" onclick="non()">Non</button>
+    </div>
+
+  <script>
+
+const btn = document.querySelector(".non");
+
+btn.addEventListener("mouseover", () => {
+    btn.style.position = "absolute";
+    btn.style.top = Math.random()*80 + "%";
+    btn.style.left = Math.random()*80 + "%";
+});
+
+function oui(){
+    document.body.innerHTML = `
+        <h1>❤️❤️❤️</h1>
+        <p>Je savais que tu dirais oui 😎</p>
+    `;
+}
+
+</script>
+
+</body>
+</html>
